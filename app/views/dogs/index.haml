@@ -1,0 +1,8 @@
+%h1 List of dogs
+= link_to 'New Dog', new_dog_path
+%hr
+-@dogs.each do |dog|
+  = dog.name
+  = link_to 'edit', edit_dog_path(dog)
+  = link_to 'delete', dog_path(dog), method: :delete
+%hr
